@@ -1,0 +1,71 @@
+CS 61C Su13 Homework 3
+Name:Fei Liu
+Login:cs61c-ew
+
+Problem 1
+
+a.add, addi, sub
+
+b.Refer to value stored in the destination register
+
+c.andi ,ori
+
+d.57
+
+e.0x10008000   increasing order
+
+f.opcode for xor is 100110 xori is 001110. They are all zero extended.
+
+g.kilobyte is 10 based 10^3 while kibi is 2^10=1024. There is minor rounding
+difference.
+
+h.$a3, not preserved
+
+Problem 2
+
+Add comments to each line:
+
+fun:    addi $t0,$zero,32
+        # comment here    set $t0 to be 32
+        addi $t1,$zero,0
+        # comment here    set $t1 to be 0        
+loop:    sub $t0,$t0,4
+        # comment here    subtract $t0 by 4        
+        srlv $t2,$a0,$t0
+        # comment here    right logical shift $t0 by value stored in $a0 and
+        # store it in $t2       
+        andi $t2,$t2,15
+        # comment here    $t2 and 15 do logical and save back to $t2       
+        slti $t2,$t3,10 
+        #comment here     If $t3<10 $t2 is 1 and not $t2 is 0
+        bne  $t3,$zero,addLess
+        # comment here    if $t3 is not 0 which means that $t2 is $t<10\
+        # then go to label addLess 
+        addi $t2,$t2,7
+        # comment here    add 7 to $t2 variable and store to $t2\
+        #This happens when above condition was not satisfied. 
+addLess:addi $t2,$t2,48
+        # comment here    add 48 to $t2. 
+        add  $t4,$a1,$t1
+        # comment here    move the pointer right by the amount specified by $t1
+        sb   $t2,0($t4)
+        # comment here    save the byte to the location specified by $t4
+        beq  $t0,$zero,done
+        # comment here    if $t0 is 0, then jump to done 
+        addi $t1,$t1,1
+        # comment here    increment $t1 by 1
+        j loop
+        # comment here    jump back to label loop
+done:   sb   $zero,1($t4)
+        # comment here    put a NULL after the last bit pointed by $t4
+        jr   $ra
+        # comment here    return the function
+
+Explain what is in the array as the function returns (1-2 sentences):
+
+The loop goes over every byte of a 32 bits long binary with 4 bits at a
+time and based on the $a0 variable to generate right shifted 4 bit
+binaries and convert the range of these binaries from 0-15 to hex(0-E)
+format.
+
+

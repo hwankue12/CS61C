@@ -1,0 +1,34 @@
+gcc -o matrixMultiply -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 matrixMultiply.c
+./matrixMultiply
+Running Part A...
+
+n = 10, 0.667 Gflop/s
+n = 14, 0.915 Gflop/s
+n = 19, 0.980 Gflop/s
+n = 26, 1.598 Gflop/s
+n = 35, 1.588 Gflop/s
+n = 47, 1.573 Gflop/s
+n = 63, 1.588 Gflop/s
+n = 85, 1.460 Gflop/s
+n = 114, 1.497 Gflop/s
+n = 153, 1.521 Gflop/s
+n = 205, 1.094 Gflop/s
+n = 274, 1.522 Gflop/s
+n = 366, 1.425 Gflop/s
+n = 489, 1.255 Gflop/s
+n = 653, 0.888 Gflop/s
+n = 871, 0.227 Gflop/s
+n = 1000, 0.200 Gflop/s
+
+
+./matrixMultiply 2
+Running Part B...
+
+ijk:	n = 1000, 0.195 Gflop/s
+ikj:	n = 1000, 0.091 Gflop/s
+jik:	n = 1000, 0.197 Gflop/s
+jki:	n = 1000, 1.185 Gflop/s
+kij:	n = 1000, 0.091 Gflop/s
+kji:	n = 1000, 1.519 Gflop/s
+
+

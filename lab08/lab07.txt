@@ -1,0 +1,82 @@
+ /*
+ This is the original output
+ 
+ */
+ 1 thread(s) took 3.218513 seconds
+ 2 thread(s) took 3.684645 seconds
+ 3 thread(s) took 3.637652 seconds
+ 4 thread(s) took 3.829943 seconds
+ 5 thread(s) took 3.833703 seconds
+ 6 thread(s) took 3.748974 seconds
+ 7 thread(s) took 4.490388 seconds
+ 8 thread(s) took 4.552311 seconds
+ 9 thread(s) took 4.534991 seconds
+ 10 thread(s) took 5.018026 seconds
+ 11 thread(s) took 5.192354 seconds
+ 12 thread(s) took 5.340620 seconds
+ 13 thread(s) took 5.369375 seconds
+ 14 thread(s) took 5.609833 seconds
+ 15 thread(s) took 5.786392 seconds
+ 16 thread(s) took 6.453695 seconds
+ /*
+ second output
+
+ */
+v_add does not match oracle
+v_add does not match oracle
+v_add does not match oracle
+ 1 thread(s) took 3.249806 seconds
+ 2 thread(s) took 3.977349 seconds
+ 3 thread(s) took 3.389895 seconds
+ 4 thread(s) took 3.506706 seconds
+ 5 thread(s) took 3.650570 seconds
+ 6 thread(s) took 3.648638 seconds
+ 7 thread(s) took 3.968233 seconds
+ 8 thread(s) took 4.107978 seconds
+ 9 thread(s) took 4.314294 seconds
+ 10 thread(s) took 3.911842 seconds
+ 11 thread(s) took 4.059110 seconds
+ 12 thread(s) took 5.522161 seconds
+ 13 thread(s) took 5.243039 seconds
+ 14 thread(s) took 5.144982 seconds
+ 15 thread(s) took 5.108427 seconds
+ 16 thread(s) took 5.543057 seconds
+ /*
+ 3 rd add
+ */
+ 1 thread(s) took 5.390692 seconds
+ 2 thread(s) took 3.306095 seconds
+ 3 thread(s) took 2.975809 seconds
+ 4 thread(s) took 2.961663 seconds
+ 5 thread(s) took 2.745593 seconds
+ 6 thread(s) took 2.640682 seconds
+ 7 thread(s) took 2.804041 seconds
+ 8 thread(s) took 2.676768 seconds
+ 9 thread(s) took 2.744937 seconds
+ 10 thread(s) took 2.596264 seconds
+ 11 thread(s) took 2.625437 seconds
+ 12 thread(s) took 2.713177 seconds
+ 13 thread(s) took 2.770154 seconds
+ 14 thread(s) took 3.075984 seconds
+ 15 thread(s) took 3.045479 seconds
+ 16 thread(s) took 3.160995 seconds
+ /*
+ 4th output
+ */
+
+ 1 thread(s) took 3.240805 seconds
+ 2 thread(s) took 1.879477 seconds
+ 3 thread(s) took 1.633839 seconds
+ 4 thread(s) took 1.423050 seconds
+ 5 thread(s) took 1.387939 seconds
+ 6 thread(s) took 1.270294 seconds
+ 7 thread(s) took 1.335152 seconds
+ 8 thread(s) took 1.534258 seconds
+ 9 thread(s) took 1.427615 seconds
+ 10 thread(s) took 1.412486 seconds
+ 11 thread(s) took 1.382135 seconds
+ 12 thread(s) took 1.369289 seconds
+ 13 thread(s) took 1.326162 seconds
+ 14 thread(s) took 1.261601 seconds
+ 15 thread(s) took 1.242317 seconds
+ 16 thread(s) took 1.304177 seconds

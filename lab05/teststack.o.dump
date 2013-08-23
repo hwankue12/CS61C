@@ -1,0 +1,129 @@
+
+teststack.o:     file format elf32-tradbigmips
+teststack.o
+architecture: mips:isa32r2, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+private flags = 70001005: [abi=O32] [mips32r2] [not 32bitmode] [noreorder] [CPIC]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000f0  00000000  00000000  00000040  2**4
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  00000130  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  00000130  2**4
+                  ALLOC
+  3 .reginfo      00000018  00000000  00000000  00000130  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA, LINK_ONCE_SAME_SIZE
+  4 .pdr          00000020  00000000  00000000  00000148  2**2
+                  CONTENTS, RELOC, READONLY
+  5 .mdebug.abi32 00000000  00000000  00000000  00000168  2**0
+                  CONTENTS, READONLY
+  6 .rodata       00000050  00000000  00000000  00000170  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .comment      00000012  00000000  00000000  000001c0  2**0
+                  CONTENTS, READONLY
+  8 .gnu.attributes 00000010  00000000  00000000  000001d2  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 teststack.c
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+00000000 l    d  .mdebug.abi32	00000000 .mdebug.abi32
+00000000 l    d  .rodata	00000000 .rodata
+00000000 l    d  .reginfo	00000000 .reginfo
+00000000 l    d  .pdr	00000000 .pdr
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .gnu.attributes	00000000 .gnu.attributes
+00000000 g     F .text	000000ec main
+00000000         *UND*	00000000 EmptyStack
+00000000         *UND*	00000000 printf
+00000000         *UND*	00000000 Push
+00000000         *UND*	00000000 IsEmpty
+00000000         *UND*	00000000 Pop
+
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	27bdffd0 	addiu	sp,sp,-48
+   4:	afbf002c 	sw	ra,44(sp)
+   8:	afbe0028 	sw	s8,40(sp)
+   c:	03a0f021 	move	s8,sp
+  10:	24020007 	li	v0,7
+  14:	afc20020 	sw	v0,32(s8)
+  18:	24020002 	li	v0,2
+  1c:	afc2001c 	sw	v0,28(s8)
+  20:	0c000000 	jal	0 <main>
+			20: R_MIPS_26	EmptyStack
+  24:	00000000 	nop
+  28:	afc20018 	sw	v0,24(s8)
+  2c:	3c020000 	lui	v0,0x0
+			2c: R_MIPS_HI16	.rodata
+  30:	24420000 	addiu	v0,v0,0
+			30: R_MIPS_LO16	.rodata
+  34:	00402021 	move	a0,v0
+  38:	8fc5001c 	lw	a1,28(s8)
+  3c:	0c000000 	jal	0 <main>
+			3c: R_MIPS_26	printf
+  40:	00000000 	nop
+  44:	3c020000 	lui	v0,0x0
+			44: R_MIPS_HI16	.rodata
+  48:	24420014 	addiu	v0,v0,20
+			48: R_MIPS_LO16	.rodata
+  4c:	00402021 	move	a0,v0
+  50:	0c000000 	jal	0 <main>
+			50: R_MIPS_26	printf
+  54:	00000000 	nop
+  58:	8fc40018 	lw	a0,24(s8)
+  5c:	8fc5001c 	lw	a1,28(s8)
+  60:	0c000000 	jal	0 <main>
+			60: R_MIPS_26	Push
+  64:	00000000 	nop
+  68:	8fc40018 	lw	a0,24(s8)
+  6c:	0c000000 	jal	0 <main>
+			6c: R_MIPS_26	IsEmpty
+  70:	00000000 	nop
+  74:	10400007 	beqz	v0,94 <main+0x94>
+  78:	00000000 	nop
+  7c:	8fc40018 	lw	a0,24(s8)
+  80:	8fc50020 	lw	a1,32(s8)
+  84:	0c000000 	jal	0 <main>
+			84: R_MIPS_26	Push
+  88:	00000000 	nop
+  8c:	0800002e 	j	b8 <main+0xb8>
+			8c: R_MIPS_26	.text
+  90:	00000000 	nop
+  94:	3c020000 	lui	v0,0x0
+			94: R_MIPS_HI16	.rodata
+  98:	24420024 	addiu	v0,v0,36
+			98: R_MIPS_LO16	.rodata
+  9c:	00402021 	move	a0,v0
+  a0:	0c000000 	jal	0 <main>
+			a0: R_MIPS_26	printf
+  a4:	00000000 	nop
+  a8:	8fc40018 	lw	a0,24(s8)
+  ac:	0c000000 	jal	0 <main>
+			ac: R_MIPS_26	Pop
+  b0:	00000000 	nop
+  b4:	afc2001c 	sw	v0,28(s8)
+  b8:	3c020000 	lui	v0,0x0
+			b8: R_MIPS_HI16	.rodata
+  bc:	24420034 	addiu	v0,v0,52
+			bc: R_MIPS_LO16	.rodata
+  c0:	00402021 	move	a0,v0
+  c4:	8fc5001c 	lw	a1,28(s8)
+  c8:	0c000000 	jal	0 <main>
+			c8: R_MIPS_26	printf
+  cc:	00000000 	nop
+  d0:	00001021 	move	v0,zero
+  d4:	03c0e821 	move	sp,s8
+  d8:	8fbf002c 	lw	ra,44(sp)
+  dc:	8fbe0028 	lw	s8,40(sp)
+  e0:	27bd0030 	addiu	sp,sp,48
+  e4:	03e00008 	jr	ra
+  e8:	00000000 	nop
+  ec:	00000000 	nop

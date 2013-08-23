@@ -1,0 +1,3 @@
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+43.216 milliseconds

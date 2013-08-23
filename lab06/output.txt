@@ -1,0 +1,52 @@
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+25.342 milliseconds
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+8.954 milliseconds
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+8.605 milliseconds
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+8.305 milliseconds
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+25.924 milliseconds
+Error!!!! Transpose does not result in correct answer!!
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+25.916 milliseconds
+Error!!!! Transpose does not result in correct answer!!
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+25.58 milliseconds
+Error!!!! Transpose does not result in correct answer!!
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+11.657 milliseconds
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+29.556 milliseconds
+gcc -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3    transpose.c   -o transpose
+gcc -o transpose -ggdb -Wall -pedantic -std=c99 -D_GNU_SOURCE -O3 transpose.c
+./transpose	
+43.748 milliseconds

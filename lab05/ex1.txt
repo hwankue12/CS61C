@@ -1,0 +1,15 @@
+00000034 IsEmpty
+00000064 Push
+000000bc Pop
+
+
+20: R_MIPS_26 EmptyStack
+50:......................
+00400600 EmptyStack
+00400634 IsEmpty
+00400664 Push
+004006bc Pop
+
+in the .text section
+
+

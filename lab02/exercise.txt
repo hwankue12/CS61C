@@ -1,0 +1,9 @@
+1. Enter the GDB environment and type run [arg list]
+2. Break ... if [expression] put a break 
+3. next 
+4. step
+5. continue
+6. print [variable]
+7. display
+8. i lo //shows all local variables in a function
+9. quit// exit 

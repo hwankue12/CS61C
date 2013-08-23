@@ -1,0 +1,594 @@
+
+linked.o:     file format elf32-tradbigmips
+linked.o
+architecture: mips:isa32r2, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x004004d0
+
+Program Header:
+    PHDR off    0x00000034 vaddr 0x00400034 paddr 0x00400034 align 2**2
+         filesz 0x00000100 memsz 0x00000100 flags r-x
+  INTERP off    0x00000134 vaddr 0x00400134 paddr 0x00400134 align 2**0
+         filesz 0x0000000d memsz 0x0000000d flags r--
+0x70000000 off    0x00000164 vaddr 0x00400164 paddr 0x00400164 align 2**2
+         filesz 0x00000018 memsz 0x00000018 flags r--
+    LOAD off    0x00000000 vaddr 0x00400000 paddr 0x00400000 align 2**16
+         filesz 0x000009d4 memsz 0x000009d4 flags r-x
+    LOAD off    0x000009d4 vaddr 0x004109d4 paddr 0x004109d4 align 2**16
+         filesz 0x00000068 memsz 0x000000ac flags rw-
+ DYNAMIC off    0x0000017c vaddr 0x0040017c paddr 0x0040017c align 2**2
+         filesz 0x000000f8 memsz 0x000000f8 flags rwx
+    NOTE off    0x00000144 vaddr 0x00400144 paddr 0x00400144 align 2**2
+         filesz 0x00000020 memsz 0x00000020 flags r--
+    NULL off    0x00000000 vaddr 0x00000000 paddr 0x00000000 align 2**2
+         filesz 0x00000000 memsz 0x00000000 flags ---
+
+Dynamic Section:
+  NEEDED               libc.so.6
+  INIT                 0x0040042c
+  FINI                 0x00400930
+  HASH                 0x00400274
+  STRTAB               0x00400364
+  SYMTAB               0x004002b4
+  STRSZ                0x00000087
+  SYMENT               0x00000010
+  MIPS_RLD_MAP         0x00410a00
+  DEBUG                0x00000000
+  PLTGOT               0x00410a10
+  MIPS_RLD_VERSION     0x00000001
+  MIPS_FLAGS           0x00000002
+  MIPS_BASE_ADDRESS    0x00400000
+  MIPS_LOCAL_GOTNO     0x00000008
+  MIPS_SYMTABNO        0x0000000b
+  MIPS_UNREFEXTNO      0x00000027
+  MIPS_GOTSYM          0x00000009
+  PLTREL               0x00000011
+  JMPREL               0x00400424
+  PLTRELSZ             0x00000008
+  DT_MIPS_PLTGOT       0x00410a04
+  VERNEED              0x00400404
+  VERNEEDNUM           0x00000001
+  VERSYM               0x004003ec
+
+Version References:
+  required from libc.so.6:
+    0x0d696910 0x00 02 GLIBC_2.0
+private flags = 70001005: [abi=O32] [mips32r2] [not 32bitmode] [noreorder] [CPIC]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .interp       0000000d  00400134  00400134  00000134  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .note.ABI-tag 00000020  00400144  00400144  00000144  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .reginfo      00000018  00400164  00400164  00000164  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA, LINK_ONCE_SAME_SIZE
+  3 .dynamic      000000f8  0040017c  0040017c  0000017c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .hash         00000040  00400274  00400274  00000274  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .dynsym       000000b0  004002b4  004002b4  000002b4  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .dynstr       00000087  00400364  00400364  00000364  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .gnu.version  00000016  004003ec  004003ec  000003ec  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  8 .gnu.version_r 00000020  00400404  00400404  00000404  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .rel.plt      00000008  00400424  00400424  00000424  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 10 .init         00000058  0040042c  0040042c  0000042c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 11 .plt          00000030  004004a0  004004a0  000004a0  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .text         00000440  004004d0  004004d0  000004d0  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .MIPS.stubs   00000020  00400910  00400910  00000910  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .fini         00000034  00400930  00400930  00000930  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .rodata       00000060  00400970  00400970  00000970  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 16 .eh_frame     00000004  004009d0  004009d0  000009d0  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 17 .ctors        00000008  004109d4  004109d4  000009d4  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 18 .dtors        00000008  004109dc  004109dc  000009dc  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 19 .jcr          00000004  004109e4  004109e4  000009e4  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 20 .data         00000010  004109f0  004109f0  000009f0  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+ 21 .rld_map      00000004  00410a00  00410a00  00000a00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 22 .got.plt      0000000c  00410a04  00410a04  00000a04  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 23 .got          00000028  00410a10  00410a10  00000a10  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+ 24 .sdata        00000004  00410a38  00410a38  00000a38  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 25 .bss          00000040  00410a40  00410a40  00000a3c  2**4
+                  ALLOC
+ 26 .comment      00000011  00000000  00000000  00000a3c  2**0
+                  CONTENTS, READONLY
+ 27 .pdr          000000e0  00000000  00000000  00000a50  2**2
+                  CONTENTS, READONLY
+ 28 .debug_aranges 00000020  00000000  00000000  00000b30  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 29 .debug_pubnames 0000005f  00000000  00000000  00000b50  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 30 .debug_info   000001a1  00000000  00000000  00000baf  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 31 .debug_abbrev 00000121  00000000  00000000  00000d50  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 32 .debug_line   000000c3  00000000  00000000  00000e71  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 33 .debug_frame  0000004c  00000000  00000000  00000f34  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 34 .debug_str    00000118  00000000  00000000  00000f80  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 35 .debug_loc    0000008c  00000000  00000000  00001098  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 36 .gnu.attributes 00000010  00000000  00000000  00001124  2**0
+                  CONTENTS, READONLY
+ 37 .mdebug.abi32 00000000  00410a80  00410a80  00001134  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00400134 l    d  .interp	00000000              .interp
+00400144 l    d  .note.ABI-tag	00000000              .note.ABI-tag
+00400164 l    d  .reginfo	00000000              .reginfo
+0040017c l    d  .dynamic	00000000              .dynamic
+00400274 l    d  .hash	00000000              .hash
+004002b4 l    d  .dynsym	00000000              .dynsym
+00400364 l    d  .dynstr	00000000              .dynstr
+004003ec l    d  .gnu.version	00000000              .gnu.version
+00400404 l    d  .gnu.version_r	00000000              .gnu.version_r
+00400424 l    d  .rel.plt	00000000              .rel.plt
+0040042c l    d  .init	00000000              .init
+004004a0 l    d  .plt	00000000              .plt
+004004d0 l    d  .text	00000000              .text
+00400910 l    d  .MIPS.stubs	00000000              .MIPS.stubs
+00400930 l    d  .fini	00000000              .fini
+00400970 l    d  .rodata	00000000              .rodata
+004009d0 l    d  .eh_frame	00000000              .eh_frame
+004109d4 l    d  .ctors	00000000              .ctors
+004109dc l    d  .dtors	00000000              .dtors
+004109e4 l    d  .jcr	00000000              .jcr
+004109f0 l    d  .data	00000000              .data
+00410a00 l    d  .rld_map	00000000              .rld_map
+00410a04 l    d  .got.plt	00000000              .got.plt
+00410a10 l    d  .got	00000000              .got
+00410a38 l    d  .sdata	00000000              .sdata
+00410a40 l    d  .bss	00000000              .bss
+00000000 l    d  .comment	00000000              .comment
+00000000 l    d  .pdr	00000000              .pdr
+00000000 l    d  .debug_aranges	00000000              .debug_aranges
+00000000 l    d  .debug_pubnames	00000000              .debug_pubnames
+00000000 l    d  .debug_info	00000000              .debug_info
+00000000 l    d  .debug_abbrev	00000000              .debug_abbrev
+00000000 l    d  .debug_line	00000000              .debug_line
+00000000 l    d  .debug_frame	00000000              .debug_frame
+00000000 l    d  .debug_str	00000000              .debug_str
+00000000 l    d  .debug_loc	00000000              .debug_loc
+00000000 l    d  .gnu.attributes	00000000              .gnu.attributes
+00410a80 l    d  .mdebug.abi32	00000000              .mdebug.abi32
+00400520 l       .text	00000000              hlt
+00000000 l    df *ABS*	00000000              init.c
+00000000 l    df *ABS*	00000000              crtstuff.c
+004109d4 l     O .ctors	00000000              __CTOR_LIST__
+004109dc l     O .dtors	00000000              __DTOR_LIST__
+004109e4 l     O .jcr	00000000              __JCR_LIST__
+00400530 l     F .text	00000000              __do_global_dtors_aux
+00410a40 l     O .bss	00000001              completed.5766
+00410a44 l     O .bss	00000004              dtor_idx.5768
+004005cc l     F .text	00000000              frame_dummy
+00000000 l    df *ABS*	00000000              crtstuff.c
+004109d8 l     O .ctors	00000000              __CTOR_END__
+004009d0 l     O .eh_frame	00000000              __FRAME_END__
+004109e4 l     O .jcr	00000000              __JCR_END__
+004008b0 l     F .text	00000000              __do_global_ctors_aux
+00000000 l    df *ABS*	00000000              stack.c
+00410a50 l     O .bss	00000028              ourStack
+00000000 l    df *ABS*	00000000              teststack.c
+00000000 l    df *ABS*	00000000              elf-init.c
+004109d4 l       .ctors	00000000              __init_array_end
+004109d4 l       .ctors	00000000              __init_array_start
+004004a0 l     F .plt	00000000              _PROCEDURE_LINKAGE_TABLE_
+0040017c l     O .dynamic	00000000              _DYNAMIC
+004109f0  w    O .data	00000000              data_start
+00410a3c g       *ABS*	00000000              _fbss
+00400800 g     F .text	00000008              __libc_csu_fini
+00000000       O *UND*	00000000              _gp_disp
+00000001 g    d  *ABS*	00000000              _DYNAMIC_LINKING
+00000000  w    F *UND*	00000000              __gmon_start__
+00000000  w      *UND*	00000000              _Jv_RegisterClasses
+00400930 g     F .fini	00000000              _fini
+00400634 g     F .text	00000030              IsEmpty
+00410a10 g     O .got	00000000              _GLOBAL_OFFSET_TABLE_
+00400910       F *UND*	00000000              __libc_start_main@@GLIBC_2.0
+00400970 g     O .rodata	00000004              _IO_stdin_used
+004109f0 g     O .data	00000000              __data_start
+00418a00 g       *ABS*	00000000              _gp
+00400664 g     F .text	00000058              Push
+004004d0 g     F .text	00000000              __start
+00410a38 g     O .sdata	00000000              .hidden __dso_handle
+004109e0 g     O .dtors	00000000              .hidden __DTOR_END__
+00400808 g     F .text	000000a8              __libc_csu_init
+00000000       F *UND*	00000000              printf@@GLIBC_2.0
+004109f0 g       .data	00000000              _fdata
+00000000       O *UND*	00000000              __gnu_local_gp
+004006bc g     F .text	00000050              Pop
+00410a3c g       *ABS*	00000000              __bss_start
+00400600 g     F .text	00000034              EmptyStack
+004004d0 g       .text	00000000              _ftext
+00410a80 g       *ABS*	00000000              _end
+00410a00 g     O .rld_map	00000000              __RLD_MAP
+00410a3c g       *ABS*	00000000              _edata
+00400710 g     F .text	000000ec              main
+0040042c g     F .init	00000000              _init
+
+
+
+Disassembly of section .init:
+
+0040042c <_init>:
+  40042c:	3c1c0002 	lui	gp,0x2
+  400430:	279c85d4 	addiu	gp,gp,-31276
+  400434:	0399e021 	addu	gp,gp,t9
+  400438:	27bdffe0 	addiu	sp,sp,-32
+  40043c:	afbf001c 	sw	ra,28(sp)
+  400440:	afbc0010 	sw	gp,16(sp)
+  400444:	8f828034 	lw	v0,-32716(gp)
+  400448:	10400003 	beqz	v0,400458 <_init+0x2c>
+  40044c:	8f998034 	lw	t9,-32716(gp)
+  400450:	0320f809 	jalr	t9
+  400454:	00000000 	nop
+  400458:	04110001 	bal	400460 <_init+0x34>
+  40045c:	00000000 	nop
+  400460:	0c100173 	jal	4005cc <frame_dummy>
+  400464:	00000000 	nop
+  400468:	04110001 	bal	400470 <_init+0x44>
+  40046c:	00000000 	nop
+  400470:	0c10022c 	jal	4008b0 <__do_global_ctors_aux>
+  400474:	00000000 	nop
+  400478:	8fbf001c 	lw	ra,28(sp)
+  40047c:	03e00008 	jr	ra
+  400480:	27bd0020 	addiu	sp,sp,32
+
+Disassembly of section .plt:
+
+004004a0 <_PROCEDURE_LINKAGE_TABLE_>:
+  4004a0:	3c1c0041 	lui	gp,0x41
+  4004a4:	8f990a04 	lw	t9,2564(gp)
+  4004a8:	279c0a04 	addiu	gp,gp,2564
+  4004ac:	031cc023 	subu	t8,t8,gp
+  4004b0:	03e07821 	move	t7,ra
+  4004b4:	0018c082 	srl	t8,t8,0x2
+  4004b8:	0320f809 	jalr	t9
+  4004bc:	2718fffe 	addiu	t8,t8,-2
+
+004004c0 <printf@plt>:
+  4004c0:	3c0f0041 	lui	t7,0x41
+  4004c4:	8df90a0c 	lw	t9,2572(t7)
+  4004c8:	03200008 	jr	t9
+  4004cc:	25f80a0c 	addiu	t8,t7,2572
+
+Disassembly of section .text:
+
+004004d0 <__start>:
+  4004d0:	03e00021 	move	zero,ra
+  4004d4:	04110001 	bal	4004dc <__start+0xc>
+  4004d8:	00000000 	nop
+  4004dc:	3c1c0042 	lui	gp,0x42
+  4004e0:	279c8a00 	addiu	gp,gp,-30208
+  4004e4:	0000f821 	move	ra,zero
+  4004e8:	8f848018 	lw	a0,-32744(gp)
+  4004ec:	8fa50000 	lw	a1,0(sp)
+  4004f0:	27a60004 	addiu	a2,sp,4
+  4004f4:	2401fff8 	li	at,-8
+  4004f8:	03a1e824 	and	sp,sp,at
+  4004fc:	27bdffe0 	addiu	sp,sp,-32
+  400500:	8f87801c 	lw	a3,-32740(gp)
+  400504:	8f888020 	lw	t0,-32736(gp)
+  400508:	afa80010 	sw	t0,16(sp)
+  40050c:	afa20014 	sw	v0,20(sp)
+  400510:	afbd0018 	sw	sp,24(sp)
+  400514:	8f998030 	lw	t9,-32720(gp)
+  400518:	0320f809 	jalr	t9
+  40051c:	00000000 	nop
+
+00400520 <hlt>:
+  400520:	1000ffff 	b	400520 <hlt>
+  400524:	00000000 	nop
+	...
+
+00400530 <__do_global_dtors_aux>:
+  400530:	27bdffd0 	addiu	sp,sp,-48
+  400534:	afb30028 	sw	s3,40(sp)
+  400538:	3c130041 	lui	s3,0x41
+  40053c:	92620a40 	lbu	v0,2624(s3)
+  400540:	afbf002c 	sw	ra,44(sp)
+  400544:	afb20024 	sw	s2,36(sp)
+  400548:	afb10020 	sw	s1,32(sp)
+  40054c:	14400018 	bnez	v0,4005b0 <__do_global_dtors_aux+0x80>
+  400550:	afb0001c 	sw	s0,28(sp)
+  400554:	3c120041 	lui	s2,0x41
+  400558:	3c110041 	lui	s1,0x41
+  40055c:	265209dc 	addiu	s2,s2,2524
+  400560:	3c100041 	lui	s0,0x41
+  400564:	263109e0 	addiu	s1,s1,2528
+  400568:	02328823 	subu	s1,s1,s2
+  40056c:	8e020a44 	lw	v0,2628(s0)
+  400570:	00118883 	sra	s1,s1,0x2
+  400574:	2631ffff 	addiu	s1,s1,-1
+  400578:	0051182b 	sltu	v1,v0,s1
+  40057c:	1060000a 	beqz	v1,4005a8 <__do_global_dtors_aux+0x78>
+  400580:	24420001 	addiu	v0,v0,1
+  400584:	00021880 	sll	v1,v0,0x2
+  400588:	02431821 	addu	v1,s2,v1
+  40058c:	8c790000 	lw	t9,0(v1)
+  400590:	0320f809 	jalr	t9
+  400594:	ae020a44 	sw	v0,2628(s0)
+  400598:	8e020a44 	lw	v0,2628(s0)
+  40059c:	0051182b 	sltu	v1,v0,s1
+  4005a0:	1460fff8 	bnez	v1,400584 <__do_global_dtors_aux+0x54>
+  4005a4:	24420001 	addiu	v0,v0,1
+  4005a8:	24020001 	li	v0,1
+  4005ac:	a2620a40 	sb	v0,2624(s3)
+  4005b0:	8fbf002c 	lw	ra,44(sp)
+  4005b4:	8fb30028 	lw	s3,40(sp)
+  4005b8:	8fb20024 	lw	s2,36(sp)
+  4005bc:	8fb10020 	lw	s1,32(sp)
+  4005c0:	8fb0001c 	lw	s0,28(sp)
+  4005c4:	03e00008 	jr	ra
+  4005c8:	27bd0030 	addiu	sp,sp,48
+
+004005cc <frame_dummy>:
+  4005cc:	3c040041 	lui	a0,0x41
+  4005d0:	8c8209e4 	lw	v0,2532(a0)
+  4005d4:	10400006 	beqz	v0,4005f0 <frame_dummy+0x24>
+  4005d8:	3c190000 	lui	t9,0x0
+  4005dc:	27390000 	addiu	t9,t9,0
+  4005e0:	13200003 	beqz	t9,4005f0 <frame_dummy+0x24>
+  4005e4:	00000000 	nop
+  4005e8:	03200008 	jr	t9
+  4005ec:	248409e4 	addiu	a0,a0,2532
+  4005f0:	03e00008 	jr	ra
+  4005f4:	00000000 	nop
+	...
+
+00400600 <EmptyStack>:
+  400600:	27bdfff8 	addiu	sp,sp,-8
+  400604:	afbe0004 	sw	s8,4(sp)
+  400608:	03a0f021 	move	s8,sp
+  40060c:	3c020041 	lui	v0,0x41
+  400610:	24420a50 	addiu	v0,v0,2640
+  400614:	ac400024 	sw	zero,36(v0)
+  400618:	3c020041 	lui	v0,0x41
+  40061c:	24420a50 	addiu	v0,v0,2640
+  400620:	03c0e821 	move	sp,s8
+  400624:	8fbe0004 	lw	s8,4(sp)
+  400628:	27bd0008 	addiu	sp,sp,8
+  40062c:	03e00008 	jr	ra
+  400630:	00000000 	nop
+
+00400634 <IsEmpty>:
+  400634:	27bdfff8 	addiu	sp,sp,-8
+  400638:	afbe0004 	sw	s8,4(sp)
+  40063c:	03a0f021 	move	s8,sp
+  400640:	afc40008 	sw	a0,8(s8)
+  400644:	8fc20008 	lw	v0,8(s8)
+  400648:	8c420024 	lw	v0,36(v0)
+  40064c:	2c420001 	sltiu	v0,v0,1
+  400650:	03c0e821 	move	sp,s8
+  400654:	8fbe0004 	lw	s8,4(sp)
+  400658:	27bd0008 	addiu	sp,sp,8
+  40065c:	03e00008 	jr	ra
+  400660:	00000000 	nop
+
+00400664 <Push>:
+  400664:	27bdfff8 	addiu	sp,sp,-8
+  400668:	afbe0004 	sw	s8,4(sp)
+  40066c:	03a0f021 	move	s8,sp
+  400670:	afc40008 	sw	a0,8(s8)
+  400674:	afc5000c 	sw	a1,12(s8)
+  400678:	8fc20008 	lw	v0,8(s8)
+  40067c:	8c420024 	lw	v0,36(v0)
+  400680:	8fc30008 	lw	v1,8(s8)
+  400684:	00021080 	sll	v0,v0,0x2
+  400688:	00621021 	addu	v0,v1,v0
+  40068c:	8fc3000c 	lw	v1,12(s8)
+  400690:	ac430000 	sw	v1,0(v0)
+  400694:	8fc20008 	lw	v0,8(s8)
+  400698:	8c420024 	lw	v0,36(v0)
+  40069c:	24430001 	addiu	v1,v0,1
+  4006a0:	8fc20008 	lw	v0,8(s8)
+  4006a4:	ac430024 	sw	v1,36(v0)
+  4006a8:	03c0e821 	move	sp,s8
+  4006ac:	8fbe0004 	lw	s8,4(sp)
+  4006b0:	27bd0008 	addiu	sp,sp,8
+  4006b4:	03e00008 	jr	ra
+  4006b8:	00000000 	nop
+
+004006bc <Pop>:
+  4006bc:	27bdfff8 	addiu	sp,sp,-8
+  4006c0:	afbe0004 	sw	s8,4(sp)
+  4006c4:	03a0f021 	move	s8,sp
+  4006c8:	afc40008 	sw	a0,8(s8)
+  4006cc:	8fc20008 	lw	v0,8(s8)
+  4006d0:	8c420024 	lw	v0,36(v0)
+  4006d4:	2443ffff 	addiu	v1,v0,-1
+  4006d8:	8fc20008 	lw	v0,8(s8)
+  4006dc:	ac430024 	sw	v1,36(v0)
+  4006e0:	8fc20008 	lw	v0,8(s8)
+  4006e4:	8c420024 	lw	v0,36(v0)
+  4006e8:	8fc30008 	lw	v1,8(s8)
+  4006ec:	00021080 	sll	v0,v0,0x2
+  4006f0:	00621021 	addu	v0,v1,v0
+  4006f4:	8c420000 	lw	v0,0(v0)
+  4006f8:	03c0e821 	move	sp,s8
+  4006fc:	8fbe0004 	lw	s8,4(sp)
+  400700:	27bd0008 	addiu	sp,sp,8
+  400704:	03e00008 	jr	ra
+  400708:	00000000 	nop
+  40070c:	00000000 	nop
+
+00400710 <main>:
+  400710:	27bdffd0 	addiu	sp,sp,-48
+  400714:	afbf002c 	sw	ra,44(sp)
+  400718:	afbe0028 	sw	s8,40(sp)
+  40071c:	03a0f021 	move	s8,sp
+  400720:	24020007 	li	v0,7
+  400724:	afc20020 	sw	v0,32(s8)
+  400728:	24020002 	li	v0,2
+  40072c:	afc2001c 	sw	v0,28(s8)
+  400730:	0c100180 	jal	400600 <EmptyStack>
+  400734:	00000000 	nop
+  400738:	afc20018 	sw	v0,24(s8)
+  40073c:	3c020040 	lui	v0,0x40
+  400740:	24420980 	addiu	v0,v0,2432
+  400744:	00402021 	move	a0,v0
+  400748:	8fc5001c 	lw	a1,28(s8)
+  40074c:	0c100130 	jal	4004c0 <printf@plt>
+  400750:	00000000 	nop
+  400754:	3c020040 	lui	v0,0x40
+  400758:	24420994 	addiu	v0,v0,2452
+  40075c:	00402021 	move	a0,v0
+  400760:	0c100130 	jal	4004c0 <printf@plt>
+  400764:	00000000 	nop
+  400768:	8fc40018 	lw	a0,24(s8)
+  40076c:	8fc5001c 	lw	a1,28(s8)
+  400770:	0c100199 	jal	400664 <Push>
+  400774:	00000000 	nop
+  400778:	8fc40018 	lw	a0,24(s8)
+  40077c:	0c10018d 	jal	400634 <IsEmpty>
+  400780:	00000000 	nop
+  400784:	10400007 	beqz	v0,4007a4 <main+0x94>
+  400788:	00000000 	nop
+  40078c:	8fc40018 	lw	a0,24(s8)
+  400790:	8fc50020 	lw	a1,32(s8)
+  400794:	0c100199 	jal	400664 <Push>
+  400798:	00000000 	nop
+  40079c:	081001f2 	j	4007c8 <main+0xb8>
+  4007a0:	00000000 	nop
+  4007a4:	3c020040 	lui	v0,0x40
+  4007a8:	244209a4 	addiu	v0,v0,2468
+  4007ac:	00402021 	move	a0,v0
+  4007b0:	0c100130 	jal	4004c0 <printf@plt>
+  4007b4:	00000000 	nop
+  4007b8:	8fc40018 	lw	a0,24(s8)
+  4007bc:	0c1001af 	jal	4006bc <Pop>
+  4007c0:	00000000 	nop
+  4007c4:	afc2001c 	sw	v0,28(s8)
+  4007c8:	3c020040 	lui	v0,0x40
+  4007cc:	244209b4 	addiu	v0,v0,2484
+  4007d0:	00402021 	move	a0,v0
+  4007d4:	8fc5001c 	lw	a1,28(s8)
+  4007d8:	0c100130 	jal	4004c0 <printf@plt>
+  4007dc:	00000000 	nop
+  4007e0:	00001021 	move	v0,zero
+  4007e4:	03c0e821 	move	sp,s8
+  4007e8:	8fbf002c 	lw	ra,44(sp)
+  4007ec:	8fbe0028 	lw	s8,40(sp)
+  4007f0:	27bd0030 	addiu	sp,sp,48
+  4007f4:	03e00008 	jr	ra
+  4007f8:	00000000 	nop
+  4007fc:	00000000 	nop
+
+00400800 <__libc_csu_fini>:
+  400800:	03e00008 	jr	ra
+  400804:	00000000 	nop
+
+00400808 <__libc_csu_init>:
+  400808:	3c1c0002 	lui	gp,0x2
+  40080c:	279c81f8 	addiu	gp,gp,-32264
+  400810:	0399e021 	addu	gp,gp,t9
+  400814:	27bdffc8 	addiu	sp,sp,-56
+  400818:	afbf0034 	sw	ra,52(sp)
+  40081c:	afb50030 	sw	s5,48(sp)
+  400820:	afb4002c 	sw	s4,44(sp)
+  400824:	afb30028 	sw	s3,40(sp)
+  400828:	afb20024 	sw	s2,36(sp)
+  40082c:	afb10020 	sw	s1,32(sp)
+  400830:	afb0001c 	sw	s0,28(sp)
+  400834:	afbc0010 	sw	gp,16(sp)
+  400838:	8f998024 	lw	t9,-32732(gp)
+  40083c:	00809821 	move	s3,a0
+  400840:	00a0a021 	move	s4,a1
+  400844:	0320f809 	jalr	t9
+  400848:	00c0a821 	move	s5,a2
+  40084c:	8fbc0010 	lw	gp,16(sp)
+  400850:	8f918028 	lw	s1,-32728(gp)
+  400854:	8f928028 	lw	s2,-32728(gp)
+  400858:	02519023 	subu	s2,s2,s1
+  40085c:	00129083 	sra	s2,s2,0x2
+  400860:	1240000a 	beqz	s2,40088c <__libc_csu_init+0x84>
+  400864:	00008021 	move	s0,zero
+  400868:	8e390000 	lw	t9,0(s1)
+  40086c:	26100001 	addiu	s0,s0,1
+  400870:	02602021 	move	a0,s3
+  400874:	02802821 	move	a1,s4
+  400878:	0320f809 	jalr	t9
+  40087c:	02a03021 	move	a2,s5
+  400880:	0212102b 	sltu	v0,s0,s2
+  400884:	1440fff8 	bnez	v0,400868 <__libc_csu_init+0x60>
+  400888:	26310004 	addiu	s1,s1,4
+  40088c:	8fbf0034 	lw	ra,52(sp)
+  400890:	8fb50030 	lw	s5,48(sp)
+  400894:	8fb4002c 	lw	s4,44(sp)
+  400898:	8fb30028 	lw	s3,40(sp)
+  40089c:	8fb20024 	lw	s2,36(sp)
+  4008a0:	8fb10020 	lw	s1,32(sp)
+  4008a4:	8fb0001c 	lw	s0,28(sp)
+  4008a8:	03e00008 	jr	ra
+  4008ac:	27bd0038 	addiu	sp,sp,56
+
+004008b0 <__do_global_ctors_aux>:
+  4008b0:	3c020041 	lui	v0,0x41
+  4008b4:	8c5909d4 	lw	t9,2516(v0)
+  4008b8:	27bdffd8 	addiu	sp,sp,-40
+  4008bc:	2402ffff 	li	v0,-1
+  4008c0:	afbf0024 	sw	ra,36(sp)
+  4008c4:	afb10020 	sw	s1,32(sp)
+  4008c8:	13220009 	beq	t9,v0,4008f0 <__do_global_ctors_aux+0x40>
+  4008cc:	afb0001c 	sw	s0,28(sp)
+  4008d0:	3c100041 	lui	s0,0x41
+  4008d4:	261009d4 	addiu	s0,s0,2516
+  4008d8:	2411ffff 	li	s1,-1
+  4008dc:	0320f809 	jalr	t9
+  4008e0:	2610fffc 	addiu	s0,s0,-4
+  4008e4:	8e190000 	lw	t9,0(s0)
+  4008e8:	1731fffc 	bne	t9,s1,4008dc <__do_global_ctors_aux+0x2c>
+  4008ec:	00000000 	nop
+  4008f0:	8fbf0024 	lw	ra,36(sp)
+  4008f4:	8fb10020 	lw	s1,32(sp)
+  4008f8:	8fb0001c 	lw	s0,28(sp)
+  4008fc:	03e00008 	jr	ra
+  400900:	27bd0028 	addiu	sp,sp,40
+	...
+
+Disassembly of section .MIPS.stubs:
+
+00400910 <.MIPS.stubs>:
+  400910:	8f998010 	lw	t9,-32752(gp)
+  400914:	03e07821 	move	t7,ra
+  400918:	0320f809 	jalr	t9
+  40091c:	24180009 	li	t8,9
+	...
+
+Disassembly of section .fini:
+
+00400930 <_fini>:
+  400930:	3c1c0002 	lui	gp,0x2
+  400934:	279c80d0 	addiu	gp,gp,-32560
+  400938:	0399e021 	addu	gp,gp,t9
+  40093c:	27bdffe0 	addiu	sp,sp,-32
+  400940:	afbf001c 	sw	ra,28(sp)
+  400944:	afbc0010 	sw	gp,16(sp)
+  400948:	04110001 	bal	400950 <_fini+0x20>
+  40094c:	00000000 	nop
+  400950:	0c10014c 	jal	400530 <__do_global_dtors_aux>
+  400954:	00000000 	nop
+  400958:	8fbf001c 	lw	ra,28(sp)
+  40095c:	03e00008 	jr	ra
+  400960:	27bd0020 	addiu	sp,sp,32

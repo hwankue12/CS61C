@@ -1,0 +1,125 @@
+
+stack.o:     file format elf32-tradbigmips
+stack.o
+architecture: mips:isa32r2, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+private flags = 70001005: [abi=O32] [mips32r2] [not 32bitmode] [noreorder] [CPIC]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000110  00000000  00000000  00000040  2**4
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  00000150  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000030  00000000  00000000  00000150  2**4
+                  ALLOC
+  3 .reginfo      00000018  00000000  00000000  00000150  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA, LINK_ONCE_SAME_SIZE
+  4 .pdr          00000080  00000000  00000000  00000168  2**2
+                  CONTENTS, RELOC, READONLY
+  5 .mdebug.abi32 00000000  00000000  00000000  000001e8  2**0
+                  CONTENTS, READONLY
+  6 .comment      00000012  00000000  00000000  000001e8  2**0
+                  CONTENTS, READONLY
+  7 .gnu.attributes 00000010  00000000  00000000  000001fa  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 stack.c
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+00000000 l    d  .mdebug.abi32	00000000 .mdebug.abi32
+00000000 l     O .bss	00000028 ourStack
+00000000 l    d  .reginfo	00000000 .reginfo
+00000000 l    d  .pdr	00000000 .pdr
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .gnu.attributes	00000000 .gnu.attributes
+00000000 g     F .text	00000034 EmptyStack
+00000034 g     F .text	00000030 IsEmpty
+00000064 g     F .text	00000058 Push
+000000bc g     F .text	00000050 Pop
+
+
+
+Disassembly of section .text:
+
+00000000 <EmptyStack>:
+   0:	27bdfff8 	addiu	sp,sp,-8
+   4:	afbe0004 	sw	s8,4(sp)
+   8:	03a0f021 	move	s8,sp
+   c:	3c020000 	lui	v0,0x0
+			c: R_MIPS_HI16	.bss
+  10:	24420000 	addiu	v0,v0,0
+			10: R_MIPS_LO16	.bss
+  14:	ac400024 	sw	zero,36(v0)
+  18:	3c020000 	lui	v0,0x0
+			18: R_MIPS_HI16	.bss
+  1c:	24420000 	addiu	v0,v0,0
+			1c: R_MIPS_LO16	.bss
+  20:	03c0e821 	move	sp,s8
+  24:	8fbe0004 	lw	s8,4(sp)
+  28:	27bd0008 	addiu	sp,sp,8
+  2c:	03e00008 	jr	ra
+  30:	00000000 	nop
+
+00000034 <IsEmpty>:
+  34:	27bdfff8 	addiu	sp,sp,-8
+  38:	afbe0004 	sw	s8,4(sp)
+  3c:	03a0f021 	move	s8,sp
+  40:	afc40008 	sw	a0,8(s8)
+  44:	8fc20008 	lw	v0,8(s8)
+  48:	8c420024 	lw	v0,36(v0)
+  4c:	2c420001 	sltiu	v0,v0,1
+  50:	03c0e821 	move	sp,s8
+  54:	8fbe0004 	lw	s8,4(sp)
+  58:	27bd0008 	addiu	sp,sp,8
+  5c:	03e00008 	jr	ra
+  60:	00000000 	nop
+
+00000064 <Push>:
+  64:	27bdfff8 	addiu	sp,sp,-8
+  68:	afbe0004 	sw	s8,4(sp)
+  6c:	03a0f021 	move	s8,sp
+  70:	afc40008 	sw	a0,8(s8)
+  74:	afc5000c 	sw	a1,12(s8)
+  78:	8fc20008 	lw	v0,8(s8)
+  7c:	8c420024 	lw	v0,36(v0)
+  80:	8fc30008 	lw	v1,8(s8)
+  84:	00021080 	sll	v0,v0,0x2
+  88:	00621021 	addu	v0,v1,v0
+  8c:	8fc3000c 	lw	v1,12(s8)
+  90:	ac430000 	sw	v1,0(v0)
+  94:	8fc20008 	lw	v0,8(s8)
+  98:	8c420024 	lw	v0,36(v0)
+  9c:	24430001 	addiu	v1,v0,1
+  a0:	8fc20008 	lw	v0,8(s8)
+  a4:	ac430024 	sw	v1,36(v0)
+  a8:	03c0e821 	move	sp,s8
+  ac:	8fbe0004 	lw	s8,4(sp)
+  b0:	27bd0008 	addiu	sp,sp,8
+  b4:	03e00008 	jr	ra
+  b8:	00000000 	nop
+
+000000bc <Pop>:
+  bc:	27bdfff8 	addiu	sp,sp,-8
+  c0:	afbe0004 	sw	s8,4(sp)
+  c4:	03a0f021 	move	s8,sp
+  c8:	afc40008 	sw	a0,8(s8)
+  cc:	8fc20008 	lw	v0,8(s8)
+  d0:	8c420024 	lw	v0,36(v0)
+  d4:	2443ffff 	addiu	v1,v0,-1
+  d8:	8fc20008 	lw	v0,8(s8)
+  dc:	ac430024 	sw	v1,36(v0)
+  e0:	8fc20008 	lw	v0,8(s8)
+  e4:	8c420024 	lw	v0,36(v0)
+  e8:	8fc30008 	lw	v1,8(s8)
+  ec:	00021080 	sll	v0,v0,0x2
+  f0:	00621021 	addu	v0,v1,v0
+  f4:	8c420000 	lw	v0,0(v0)
+  f8:	03c0e821 	move	sp,s8
+  fc:	8fbe0004 	lw	s8,4(sp)
+ 100:	27bd0008 	addiu	sp,sp,8
+ 104:	03e00008 	jr	ra
+ 108:	00000000 	nop
+ 10c:	00000000 	nop

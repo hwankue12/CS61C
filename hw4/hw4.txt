@@ -1,0 +1,69 @@
+CS 61C Homework 4
+Name:Fei Liu
+
+Login:cs61c-ew
+
+Problem 1
+
+a:11010100100111000000000000000000
+
+b:65536
+
+c:2^-40
+
+d:0 (in term of decimal and not subtracted for bias)
+
+e:31 (in term of decimal and not subtracted for bias)
+
+Problem 2
+
+a:Multiple files are to be merged into one excutable and the address of the
+instructions of the combined file is undetermined until the object files are
+ready to be linked together.
+
+b:No, the objective file have placeholders for the corresponding absolute
+address of other files. As long as the linking stage is not excuted, those
+placeholders are not filled. So, only the file changed needs recompiling and
+assembling.
+
+c i:symbol table
+
+  ii:relocation table
+
+  iii:symbol table and relocation table
+
+Problem 3
+
+a:0.02
+
+b:B is faster. By 59.091 percent.
+
+c i: 0.02 (Composition of two levels by product)
+
+  ii: 4 (Plug in HP_1 by calculating AMAT form L2)
+
+  iii: 11 (Without calculating L2)
+
+d: 6.62 (CPI base + (1*0.04(for I$)+.4*0.06(for D$))*80)
+
+Problem 4
+
+a i:10 (3 for index and 3 for offset)
+
+  ii:Share address with bytes that have  addresses: 0xABC8, 0xABC9, 0xABCA,
+  0xABCB, 0xABCC, 0xABCE, and 0xABCF. 
+
+  iii:All bytes that have index bits 001 at 4-6 bits counting from right and different tag bits will gurantee to have a cache miss. 
+
+b i:11 (2 for index and 3 for offset) 
+
+  ii: Share address with bytes that have  addresses: 0xABC8, 0xABC9, 0xABCA,
+  0xABCB, 0xABCC, 0xABCE, and 0xABCF.  
+
+  iii: No such access exists.
+
+c i:Max is 70% and min is 70%.  
+
+  ii: Max is 60% and min is 60%    
+
+  iii: Max is 0% and min is 0%
